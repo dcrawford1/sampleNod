@@ -1,22 +1,19 @@
-# Language setting
-language: node_js
-
-# Version number
-node_js:
-  - 0.12
+language: none
 
 build:
   pre_ci_boot:
-    image_name: drydock/u14nod
-    image_tag: prod
+    image_name: intelight/ubuntu-dev
+    image_tag: 16.04-0
     pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+    options: '-e FOO=true -e BOO=false'
 
   pre_ci:
     - echo "this is master branch"
+    - pwd && ls -l
 
   ci:
-    - npm install
+    - pwd && ls -l
+    - echo $SHIPPABLE_BUILD_DIR
 
   post_ci:
     - ls -a
