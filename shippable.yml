@@ -10,10 +10,16 @@ build:
   pre_ci:
     - echo "this is master branch"
     - pwd && ls -l
+    - whoami
+    - echo $BOO
+    - cat /etc/os-release
 
   ci:
     - pwd && ls -l
     - echo $SHIPPABLE_BUILD_DIR
+    - whoami
+    - echo $BOO
+    - cat /etc/os-release
 
   post_ci:
     - ls -a
