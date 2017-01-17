@@ -13,6 +13,8 @@ build:
     - whoami
     - echo $BOO
     - cat /etc/os-release
+    - docker --version
+    - docker-compose --version
 
   ci:
     - pwd && ls -l
@@ -24,6 +26,8 @@ build:
   post_ci:
     - ls -a
     - pwd
+    - whoami
+    - cat /etc/os-release
 
   cache: true
 
