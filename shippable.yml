@@ -21,6 +21,8 @@ build:
     - whoami
     - echo $BOO
     - cat /etc/os-release
+    - mkdir -p bin
+    - touch bin/big
 
   post_ci:
     - ls -a
