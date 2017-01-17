@@ -16,7 +16,7 @@ build:
     - docker --version
 
   ci:
-    - pwd && ls -l
+    - pwd && ls -la
     - echo $SHIPPABLE_BUILD_DIR
     - whoami
     - echo $BOO
@@ -29,9 +29,13 @@ build:
     - pwd
     - whoami
     - cat /etc/os-release
+  
+  on_success:
+    - ls -la
+    - whoami
 
   cache: true
-
+  
   cache_dir_list: 
-    - $SHIPPABLE_BUILD_DIR/node_modules
+    - $SHIPPABLE_BUILD_DIR/bin
 
