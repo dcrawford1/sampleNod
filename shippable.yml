@@ -14,7 +14,6 @@ build:
     - echo $BOO
     - cat /etc/os-release
     - docker --version
-    - docker-compose --version
 
   ci:
     - pwd && ls -l
